@@ -27,6 +27,8 @@ public class Assessment extends BaseTime {
     @JoinColumn(name = "teacher_id", nullable = false)
     private Member teacher;
 
+    private Subject subject;
+
     private String title;
 
     private String content;
