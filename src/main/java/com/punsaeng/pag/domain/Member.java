@@ -16,7 +16,7 @@ public class Member extends BaseTime {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "classroom_id", nullable = false)
+    @JoinColumn(name = "classroom_id")
     private Classroom classroom;
 
     private String name;
@@ -26,4 +26,10 @@ public class Member extends BaseTime {
     private String password;
 
     private Role role;
+
+    // 프로필 수정 메서드
+    public void updateProfile(String name, Classroom classroom) {
+        this.name = name;
+        this.classroom = classroom;
+    }
 }
