@@ -1,5 +1,6 @@
-package com.punsaeng.pag.domain;
+package com.punsaeng.pag.entity;
 
+import com.punsaeng.pag.entity.keys.ClassroomAssessmentId;
 import jakarta.persistence.*;
 import lombok.*;
 

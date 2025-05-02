@@ -1,4 +1,4 @@
-package com.punsaeng.pag.domain;
+package com.punsaeng.pag.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

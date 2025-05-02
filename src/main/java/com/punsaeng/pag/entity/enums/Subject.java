@@ -1,4 +1,4 @@
-package com.punsaeng.pag.domain;
+package com.punsaeng.pag.entity.enums;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;

@@ -1,4 +1,4 @@
-package com.punsaeng.pag.domain;
+package com.punsaeng.pag.entity.keys;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
@@ -14,10 +14,10 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class StudentAssessmentId implements Serializable {
+public class ClassroomAssessmentId implements Serializable {
     
-    @Column(name = "student_id")
-    private Long studentId;
+    @Column(name = "classroom_id")
+    private Long classroomId;
     
     @Column(name = "assessment_id")
     private Long assessmentId;
