@@ -8,22 +8,18 @@ import lombok.*;
 @Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class AssessmentResult extends BaseTime {
+public class ClassroomAssessment extends BaseTime {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "assessment_result_id")
-    private Long id;
+    @EmbeddedId
+    private ClassroomAssessmentId id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id", nullable = false)
-    private Member member;
+    @MapsId("classroomId")
+    @JoinColumn(name = "classroom_id", nullable = false)
+    private Classroom classroom;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @MapsId("assessmentId")
     @JoinColumn(name = "assessment_id", nullable = false)
     private Assessment assessment;
-
-    private int score;
-
-    private String feedback;
-}
+} 

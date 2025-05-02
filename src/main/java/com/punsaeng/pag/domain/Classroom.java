@@ -15,7 +15,7 @@ public class Classroom extends BaseTime {
     @Column(name = "classroom_id")
     private Long id;
 
-    private String name;
-
     private int grade;
+    
+    private int classNumber;
 }
